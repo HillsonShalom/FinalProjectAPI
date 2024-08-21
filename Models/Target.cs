@@ -1,4 +1,4 @@
-﻿using FinalProjectAPI.Services.BaseModels;
+﻿using FinalProjectAPI.Models.BaseModels;
 
 namespace FinalProjectAPI.Models
 {
