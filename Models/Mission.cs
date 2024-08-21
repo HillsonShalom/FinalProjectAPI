@@ -9,8 +9,7 @@ namespace FinalProjectAPI.Models
         public Target Target { get; set; }
         public int TargetId { get; set; }
         public MissionStatus Status { get; set; } = MissionStatus.Offerd;
-        public TimeSpan EstimatedTime { get; set; }
-        public TimeSpan ExecutionTime { get; set; }
+        
         public DateTime StartDate { get; set; }
         public DateTime ExecutionDate { get; set; }
     }
