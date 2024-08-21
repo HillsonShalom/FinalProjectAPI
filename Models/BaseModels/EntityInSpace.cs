@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.Drawing;
 
 namespace FinalProjectAPI.Models.BaseModels
 {
@@ -10,7 +11,7 @@ namespace FinalProjectAPI.Models.BaseModels
         public int LocationX { get; set; }
         public int LocationY { get; set; }
 
-
+        [NotMapped]
         public Point Location
         {
             get
