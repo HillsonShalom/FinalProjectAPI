@@ -1,4 +1,5 @@
-﻿using FinalProjectAPI.Models.BaseModels;
+﻿using FinalProjectAPI.Data;
+using FinalProjectAPI.Models.BaseModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,12 @@ namespace FinalProjectAPI.Controllers
     [ApiController]
     public class MissionsController : ControllerBase
     {
+        private readonly AppDbContext _dbContext;
+        public MissionsController(AppDbContext db)
+        {
+            _dbContext = db;
+        }
+
         [HttpPost]
         public async Task<IActionResult> Update()
         {

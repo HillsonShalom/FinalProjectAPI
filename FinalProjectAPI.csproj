@@ -7,12 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="microsoft.EntityFrameworkCore" Version="8.0.8" />
+    <PackageReference Include="microsoft.EntityFrameworkCore.SqlServer" Version="8.0.8" />
+    <PackageReference Include="microsoft.EntityFrameworkCore.Tools" Version="8.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Data\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>

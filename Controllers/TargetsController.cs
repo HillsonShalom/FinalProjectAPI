@@ -1,4 +1,5 @@
-﻿using FinalProjectAPI.Models.AuxiliaryModels;
+﻿using FinalProjectAPI.Data;
+using FinalProjectAPI.Models.AuxiliaryModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,12 @@ namespace FinalProjectAPI.Controllers
     [ApiController]
     public class TargetsController : ControllerBase
     {
+        private readonly AppDbContext _dbContext;
+        public TargetsController(AppDbContext db)
+        {
+            _dbContext = db;
+        }
+        
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateTarget target)
         {

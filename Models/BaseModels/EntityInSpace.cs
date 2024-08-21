@@ -7,7 +7,7 @@ namespace FinalProjectAPI.Models.BaseModels
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Image { get; set; }
+        public string Image { get; set; } = "";
         public int LocationX { get; set; }
         public int LocationY { get; set; }
 

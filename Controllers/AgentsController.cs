@@ -1,4 +1,5 @@
-﻿using FinalProjectAPI.Models.AuxiliaryModels;
+﻿using FinalProjectAPI.Data;
+using FinalProjectAPI.Models.AuxiliaryModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,12 @@ namespace FinalProjectAPI.Controllers
     [ApiController]
     public class AgentsController : ControllerBase
     {
+        private readonly AppDbContext _dbContext;
+        public AgentsController(AppDbContext db)
+        {
+            _dbContext = db;
+        }
+
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateAgent agent)
         {
